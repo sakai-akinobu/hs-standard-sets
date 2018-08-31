@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/sakai-akinobu/hs-standard-sets#readme",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "mocha": "^5.2.0",
     "prettier": "1.14.2"
   }
