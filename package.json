@@ -7,8 +7,7 @@
     "build": "$(npm bin)/babel src/index.js --out-dir lib",
     "test": "$(npm bin)/mocha --recursive test/*-test.js test/**/*-test.js",
     "lint": "$(npm bin)/eslint src/*.js src/**/*.js",
-    "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix",
-    "prettier": "$(npm bin)/prettier --write src/*.js src/**/*.js"
+    "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix"
   },
   "repository": {
     "type": "git",
@@ -30,9 +29,7 @@
     "babel-eslint": "^9.0.0",
     "eslint": "^5.4.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "mocha": "^5.2.0",
-    "prettier": "1.14.2"
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0"
