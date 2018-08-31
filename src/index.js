@@ -1,1 +1,3 @@
-export default {};
+import standard from './standard';
+
+export default standard;
