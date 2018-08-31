@@ -4,6 +4,7 @@
   "description": "Utilities for the Hearthstone standard card set.",
   "main": "lib/index.js",
   "scripts": {
+    "build": "$(npm bin)/babel src/index.js --out-dir lib",
     "test": "$(npm bin)/mocha --recursive test/*-test.js test/**/*-test.js",
     "prettier": "$(npm bin)/prettier --write src/*.js src/**/*.js"
   },
