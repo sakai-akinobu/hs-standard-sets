@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/sakai-akinobu/hs-standard-sets/issues"
   },
-  "homepage": "https://github.com/sakai-akinobu/hs-standard-sets#readme"
+  "homepage": "https://github.com/sakai-akinobu/hs-standard-sets#readme",
+  "devDependencies": {
+    "prettier": "1.14.2"
+  }
 }
