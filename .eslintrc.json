@@ -14,7 +14,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "import"
+    "import",
+    "prettier"
   ],
   "rules": {
     "indent": "off",
@@ -122,6 +123,7 @@
     "array-callback-return": "error",
     "import/newline-after-import": "error",
     "import/imports-first": "error",
-    "import/extensions": "error"
+    "import/extensions": "error",
+    "prettier/prettier": "error"
   }
 }
