@@ -1,4 +1,10 @@
 // @flow
-import standard from './standard';
+import {filter} from './cardSetFilter';
 
-export default standard;
+function sets(date: Date = new Date()) {
+  return filter(date).map(cardSet => cardSet.name);
+}
+
+export default {
+  sets,
+};
