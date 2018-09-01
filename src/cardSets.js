@@ -1,82 +1,67 @@
 export default [
   {
-    name: 'CORE',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'NAXX', // Curse of Naxxramas
+    releasedAt: new Date('2014-07-22'),
+    expiredAt: new Date('2016-04-16'),
   },
   {
-    name: 'EXPERT1',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'GVG', // Goblins vs Gnomes
+    releasedAt: new Date('2014-12-08'),
+    expiredAt: new Date('2016-04-16'),
   },
   {
-    name: 'TGT',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'BRM', // Blackrock Mountain
+    releasedAt: new Date('2015-04-02'),
+    expiredAt: new Date('2017-04-07'),
   },
   {
-    name: 'BRM',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'TGT', // The Grand Tournament
+    releasedAt: new Date('2015-08-24'),
+    expiredAt: new Date('2017-04-07'),
   },
   {
-    name: 'GANGS',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'LOE', // The League of Explorers
+    releasedAt: new Date('2015-11-12'),
+    expiredAt: new Date('2017-04-07'),
   },
   {
-    name: 'HOF',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'OG', // Whispers of the Old Gods
+    releasedAt: new Date('2016-04-16'),
+    expiredAt: new Date('2018-04-12'),
   },
   {
-    name: 'NAXX',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'KARA', // One Night in Karazhan
+    releasedAt: new Date('2016-08-11'),
+    expiredAt: new Date('2018-04-12'),
   },
   {
-    name: 'GILNEAS',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'GANGS', // Mean Streets of Gadgetzan
+    releasedAt: new Date('2016-12-01'),
+    expiredAt: new Date('2018-04-12'),
   },
   {
-    name: 'GVG',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'UNGORO', // Journey to Un'Goro
+    releasedAt: new Date('2017-04-07'),
+    expiredAt: null,
   },
   {
-    name: 'KARA',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'ICECROWN', // Knights of the Frozen Throne
+    releasedAt: new Date('2017-08-11'),
+    expiredAt: null,
   },
   {
-    name: 'LOE',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'LOOTAPALOOZA', // Kobolds & Catacombs
+    releasedAt: new Date('2017-12-07'),
+    expiredAt: null,
   },
   {
-    name: 'OG',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'GILNEAS', // Witchwood
+    releasedAt: new Date('2018-04-12'),
+    expiredAt: null,
   },
   {
-    name: 'UNGORO',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
-  },
-  {
-    name: 'ICECROWN',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
-  },
-  {
-    name: 'LOOTAPALOOZA',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
-  },
-  {
-    name: 'BOOMSDAY',
-    openedAt: new Date('2010-01-01T00:00:00'),
-    closedAt: new Date('2020-01-01T00:00:00'),
+    name: 'BOOMSDAY', // The Boomsday Project
+    releasedAt: new Date('2018-08-07'),
+    expiredAt: null,
   },
 ];
