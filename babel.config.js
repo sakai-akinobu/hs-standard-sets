@@ -11,4 +11,12 @@ const presets = [
   '@babel/preset-flow',
 ];
 
-module.exports = {presets};
+const env = {
+  test: {
+    presets: [
+      'power-assert',
+    ],
+  },
+};
+
+module.exports = {presets, env};
