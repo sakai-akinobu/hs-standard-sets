@@ -1,9 +1,5 @@
 // @flow
-type CardSet = {|
-  name: string,
-  releasedAt: Date,
-  expiredAt: ?Date,
-|};
+import type {CardSet} from './types';
 
 const cardSets: CardSet[] = [
   {
