@@ -4,7 +4,7 @@
   "description": "Utilities for the Hearthstone standard card set.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "$(npm bin)/babel src/index.js --out-dir lib",
+    "build": "$(npm bin)/rollup -c",
     "test": "$(npm bin)/mocha --recursive test/*-test.js test/**/*-test.js",
     "lint": "$(npm bin)/eslint src/*.js src/**/*.js",
     "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix"
