@@ -8,12 +8,12 @@ import {filter} from '../src/cardSetFilter';
 
 describe('src/cardSetFilter.js', function() {
   describe('filter', function() {
-
-    function filterCardSet(dateString: string, name: CardSetName) {
-      return filter(new Date(dateString)).filter(cardSet => cardSet.name === name);
-    }
-
     describe('Boundary date at card sets and adventures', function() {
+
+      function filterCardSet(dateString: string, name: CardSetName) {
+        return filter(new Date(dateString)).filter(cardSet => cardSet.name === name);
+      }
+
       describe('Curse of Naxxramas', function() {
         it('before', function() {
           assert.strictEqual(
@@ -262,6 +262,87 @@ describe('src/cardSetFilter.js', function() {
           );
         });
       });
+    });
+
+    describe('Standard rule', function() {
+      it('Before standard rule is enforced', function() {
+        const cardSetNames = filter(new Date('2016-04-15')).map(cardSet => cardSet.name);
+        assert.deepStrictEqual(
+          cardSetNames,
+          ['NAXX', 'GVG', 'BRM', 'TGT', 'LOE'],
+        );
+      });
+
+      describe('Year of the Kraken', function() {
+        it('Release Whispers of the Old Gods', function() {
+          const cardSetNames = filter(new Date('2016-04-16')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['BRM', 'TGT', 'LOE', 'OG'],
+          );
+        });
+
+        it('Release One Night in Karazhan', function() {
+          const cardSetNames = filter(new Date('2016-08-11')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['BRM', 'TGT', 'LOE', 'OG', 'KARA'],
+          );
+        });
+
+        it('Release Mean Streets of Gadgetzan', function() {
+          const cardSetNames = filter(new Date('2016-12-01')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS'],
+          );
+        });
+      });
+
+      describe('Year of the Mammoth', function() {
+        it('Release Journey to Un\'Goro', function() {
+          const cardSetNames = filter(new Date('2017-04-07')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['OG', 'KARA', 'GANGS', 'UNGORO'],
+          );
+        });
+
+        it('Release Knights of the Frozen Throne', function() {
+          const cardSetNames = filter(new Date('2017-08-11')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN'],
+          );
+        });
+
+        it('Release Kobolds & Catacombs', function() {
+          const cardSetNames = filter(new Date('2017-12-07')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA'],
+          );
+        });
+      });
+
+      describe('Year of the Raven', function() {
+        it('Release Witchwood', function() {
+          const cardSetNames = filter(new Date('2018-04-12')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS'],
+          );
+        });
+
+        it('Release The Boomsday Project', function() {
+          const cardSetNames = filter(new Date('2018-08-07')).map(cardSet => cardSet.name);
+          assert.deepStrictEqual(
+            cardSetNames,
+            ['UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY'],
+          );
+        });
+      });
+
     });
   });
 });
