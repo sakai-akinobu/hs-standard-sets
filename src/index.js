@@ -1,7 +1,13 @@
 // @flow
+import isDate from 'lodash/isDate';
+
 import {filter} from './cardSetFilter';
 
-function sets(date: Date = new Date()) {
+export function sets(date: Date = new Date()) {
+  if (!isDate(date)) {
+    throw new TypeError('An argument must be Date object.');
+  }
+
   return filter(date).map(cardSet => cardSet.name);
 }
 
