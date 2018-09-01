@@ -1,4 +1,6 @@
 # Hearthstone standard cards sets
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+[![CircleCI](https://circleci.com/gh/sakai-akinobu/hs-standard-sets.svg?style=svg)](https://circleci.com/gh/sakai-akinobu/hs-standard-sets)
 
 hs-standard-sets is a utility that returns the standard card set of Hearthstone available at a date.
 
