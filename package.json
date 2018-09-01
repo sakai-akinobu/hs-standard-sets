@@ -27,6 +27,7 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-eslint": "^9.0.0",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^5.4.0",
     "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.2.0",
