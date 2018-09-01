@@ -4,7 +4,7 @@ import cardSets from './cardSets';
 
 export function filter(date: Date = new Date()): CardSet[] {
   return cardSets.filter((cardSet) => {
-    if (date <= cardSet.releasedAt) {
+    if (date < cardSet.releasedAt) {
       return false;
     }
     if (cardSet.expiredAt && cardSet.expiredAt <= date) {
