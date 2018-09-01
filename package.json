@@ -7,7 +7,8 @@
     "build": "$(npm bin)/rollup -c",
     "test": "$(npm bin)/mocha --recursive test/*-test.js test/**/*-test.js",
     "lint": "$(npm bin)/eslint src/*.js src/**/*.js",
-    "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix"
+    "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix",
+    "flow": "$(npm bin)/flow"
   },
   "repository": {
     "type": "git",
@@ -26,15 +27,14 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^9.0.0",
-    "babel-preset-flow": "^6.23.0",
     "eslint": "^5.4.0",
     "eslint-plugin-import": "^2.14.0",
     "flow-bin": "^0.80.0",
     "mocha": "^5.2.0",
     "rollup": "^0.65.0",
     "rollup-plugin-babel": "^4.0.2",
-    "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "dependencies": {

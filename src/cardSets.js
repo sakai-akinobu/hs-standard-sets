@@ -1,4 +1,11 @@
-export default [
+// @flow
+type CardSet = {|
+  name: string,
+  releasedAt: Date,
+  expiredAt: ?Date,
+|};
+
+const cardSets: CardSet[] = [
   {
     name: 'NAXX', // Curse of Naxxramas
     releasedAt: new Date('2014-07-22'),
@@ -65,3 +72,5 @@ export default [
     expiredAt: null,
   },
 ];
+
+export default cardSets;
