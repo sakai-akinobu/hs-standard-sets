@@ -1,4 +1,5 @@
 # Hearthstone standard cards sets
+![npm version](https://img.shields.io/npm/v/hs-standard-sets.svg?style=flat)
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 [![CircleCI](https://circleci.com/gh/sakai-akinobu/hs-standard-sets.svg?style=svg)](https://circleci.com/gh/sakai-akinobu/hs-standard-sets)
 
