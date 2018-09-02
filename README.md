@@ -17,7 +17,8 @@ The name of each card set conforms to "set" property provided by [HearthstoneJSO
 ### in Node.js
 
 ```javascript
-const sets = require('hs-standard-sets').sets;
+import {sets} from 'hs-standard-sets';
+// const sets = require('hs-standard-sets').sets;
 
 sets();
 // => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
