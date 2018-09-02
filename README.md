@@ -29,7 +29,7 @@ sets(new Date('2017-08-20'));
 ### in Browser
 
 ```html
-<script src="/path/to/hs-standard-sets.js"></script>
+<script src="https://unpkg.com/hs-standard-sets/lib/index.js"></script>
 <script>
 HsStandardSets.sets();
 // => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
