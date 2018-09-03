@@ -53,7 +53,7 @@ HsStandardSets.sets({date: new Date('2017-08-20')});
 ## Installation
 
 ```
-npm install --save hs-standard-set
+npm install --save hs-standard-sets
 ```
 
 ## Test
