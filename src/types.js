@@ -1,5 +1,12 @@
 // @flow
+export type Options = {
+  date?: Date,
+  withoutClassic?: boolean,
+};
+
 export type CardSetName =
+  | 'CORE'
+  | 'EXPERT1'
   | 'NAXX'
   | 'GVG'
   | 'BRM'
@@ -17,6 +24,7 @@ export type CardSetName =
 
 export type CardSet = {|
   name: CardSetName,
-  releasedAt: Date,
+  isClassic: boolean,
+  releasedAt: ?Date,
   expiredAt: ?Date,
 |};

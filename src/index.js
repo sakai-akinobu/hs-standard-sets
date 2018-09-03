@@ -1,14 +1,22 @@
 // @flow
 import isDate from 'lodash/isDate';
+import isBoolean from 'lodash/isBoolean';
 
+import type {Options} from './types';
 import {filter} from './cardSetFilter';
 
-export function sets(date: Date = new Date()) {
+export function sets({
+  date = new Date(),
+  withoutClassic = false,
+}: Options = {}) {
   if (!isDate(date)) {
-    throw new TypeError('An argument must be Date object.');
+    throw new TypeError('"date" option must be Date object.');
+  }
+  if (!isBoolean(withoutClassic)) {
+    throw new TypeError('"withoutClassic" option must be boolean.');
   }
 
-  return filter(date).map(cardSet => cardSet.name);
+  return filter(date, withoutClassic).map(cardSet => cardSet.name);
 }
 
 export default {
