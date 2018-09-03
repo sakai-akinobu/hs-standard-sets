@@ -7,24 +7,31 @@ hs-standard-sets is a utility that returns the standard card set of Hearthstone 
 
 ## Usage
 
-Returns the name of the standard card set valid at the date given in the first argument.
-If the first argument is omitted, it returns the name of the standard card set valid at the time of execution.
+Returns the standard card set that matches the conditions given by the options.
 
-Giving the date before the standard rule is enforced will return all released card sets as of that date.
+### Options
+
+- withoutClassic: Default `false`. If set to `true`, returns card sets excluding the classic set.
+- date: Optional. Returns valid cards set at the given date. If omitted, it returns at the time of execution.
 
 The name of each card set conforms to "set" property provided by [HearthstoneJSON](https://hearthstonejson.com/).
 
 ### in Node.js
 
+
+
 ```javascript
 import {sets} from 'hs-standard-sets';
 // const sets = require('hs-standard-sets').sets;
 
-sets();
+sets(); // As of September 3, 2018
+// => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
+
+sets({withoutClassic: true});
 // => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
 
-sets(new Date('2017-08-20'));
-// => [ 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+sets({date: new Date('2017-08-20')});
+// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
 ```
 
 ### in Browser
@@ -32,11 +39,14 @@ sets(new Date('2017-08-20'));
 ```html
 <script src="https://unpkg.com/hs-standard-sets/lib/index.js"></script>
 <script>
-HsStandardSets.sets();
+HsStandardSets.sets(); // As of September 3, 2018
+// => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
+
+HsStandardSets.sets({withoutClassic: true});
 // => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
 
-HsStandardSets.sets(new Date('2017-08-20'));
-// => [ 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+HsStandardSets.sets({date: new Date('2017-08-20')});
+// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
 </script>
 ```
 
