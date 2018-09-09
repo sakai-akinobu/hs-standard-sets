@@ -11,14 +11,13 @@ Returns the standard card set that matches the conditions given by the options.
 
 ### Options
 
-- withoutClassic: Default `false`. If set to `true`, returns card sets excluding the classic set.
 - date: Optional. Returns valid cards set at the given date. If omitted, it returns at the time of execution.
+- withoutClassic: Default `false`. If set to `true`, returns card sets excluding the classic set.
+- isExpired: Default `false`. If set to `true`, returns an expired card set.
 
 The name of each card set conforms to "set" property provided by [HearthstoneJSON](https://hearthstonejson.com/).
 
 ### in Node.js
-
-
 
 ```javascript
 import {sets} from 'hs-standard-sets';
@@ -27,11 +26,14 @@ import {sets} from 'hs-standard-sets';
 sets(); // As of September 3, 2018
 // => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
 
+sets({date: new Date('2017-08-20')});
+// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+
 sets({withoutClassic: true});
 // => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
 
-sets({date: new Date('2017-08-20')});
-// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+sets({isExpired: true});
+// => [ 'NAXX', 'GVG', 'BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS' ]
 ```
 
 ### in Browser
@@ -42,11 +44,14 @@ sets({date: new Date('2017-08-20')});
 HsStandardSets.sets(); // As of September 3, 2018
 // => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
 
+HsStandardSets.sets({date: new Date('2017-08-20')});
+// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+
 HsStandardSets.sets({withoutClassic: true});
 // => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
 
-HsStandardSets.sets({date: new Date('2017-08-20')});
-// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+HsStandardSets.sets({isExpired: true});
+// => [ 'NAXX', 'GVG', 'BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS' ]
 </script>
 ```
 
