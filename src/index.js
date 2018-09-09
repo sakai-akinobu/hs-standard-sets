@@ -8,6 +8,7 @@ import {filter} from './cardSetFilter';
 export function sets({
   date = new Date(),
   withoutClassic = false,
+  isExpired = false,
 }: Options = {}) {
   if (!isDate(date)) {
     throw new TypeError('"date" option must be Date object.');
@@ -15,8 +16,11 @@ export function sets({
   if (!isBoolean(withoutClassic)) {
     throw new TypeError('"withoutClassic" option must be boolean.');
   }
+  if (!isBoolean(isExpired)) {
+    throw new TypeError('"isExpired" option must be boolean.');
+  }
 
-  return filter(date, withoutClassic).map(cardSet => cardSet.name);
+  return filter(date, withoutClassic, isExpired).map(cardSet => cardSet.name);
 }
 
 export default {

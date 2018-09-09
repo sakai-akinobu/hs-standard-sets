@@ -2,6 +2,7 @@
 export type Options = {
   date?: Date,
   withoutClassic?: boolean,
+  isExpired?: boolean,
 };
 
 export type CardSetName =
