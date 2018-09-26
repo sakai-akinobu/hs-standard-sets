@@ -3,17 +3,17 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 [![CircleCI](https://circleci.com/gh/sakai-akinobu/hs-standard-sets.svg?style=svg)](https://circleci.com/gh/sakai-akinobu/hs-standard-sets)
 
-hs-standard-sets is a utility that returns the standard card set of Hearthstone available at a date.
+hs-standard-sets is a utility that returns standard Hearthstone card sets available on a given date.
 
 ## Usage
 
-Returns the standard card set that matches the conditions given by the options.
+Returns the standard card sets that matches the conditions given by the options.
 
 ### Options
 
-- date: Optional. Returns valid cards set at the given date. If omitted, it returns at the time of execution.
-- withoutClassic: Default `false`. If set to `true`, returns card sets excluding the classic set.
-- isExpired: Default `false`. If set to `true`, returns an expired card set.
+- date: Optional. Returns available card sets at the given date. If omitted, the current date will be used.
+- withoutClassic: Default `false`. If set to `true`, returns card sets excluding classic sets.
+- isExpired: Default `false`. If set to `true`, returns expired card sets.
 
 The name of each card set conforms to "set" property provided by [HearthstoneJSON](https://hearthstonejson.com/).
 
@@ -69,4 +69,4 @@ npm run test
 
 ## License
 
-MIT licensed.
+MIT license
