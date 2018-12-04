@@ -21,6 +21,7 @@ export type CardSetName =
   | 'LOOTAPALOOZA'
   | 'GILNEAS'
   | 'BOOMSDAY'
+  | 'TROLL'
   ;
 
 export type CardSet = {|

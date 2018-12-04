@@ -262,6 +262,19 @@ describe('src/cardSetFilter.js', function() {
           );
         });
       });
+
+      describe('Rastakhan\'s Rumble', function() {
+        it('before', function() {
+          assert.strictEqual(
+            filterCardSet('2018-12-03', 'TROLL').length,
+            0
+          );
+          assert.strictEqual(
+            filterCardSet('2018-12-04', 'TROLL').length,
+            1
+          );
+        });
+      });
     });
 
     describe('Standard rule', function() {
@@ -342,6 +355,14 @@ describe('src/cardSetFilter.js', function() {
               ['CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY'],
             );
           });
+
+          it('Release Rastakhan\'s Rumble', function() {
+            const cardSetNames = filter(new Date('2018-12-04'), false, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY', 'TROLL'],
+            );
+          });
         });
       });
 
@@ -420,6 +441,14 @@ describe('src/cardSetFilter.js', function() {
             assert.deepStrictEqual(
               cardSetNames,
               ['UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY'],
+            );
+          });
+
+          it('Release Rastakhan\'s Rumble', function() {
+            const cardSetNames = filter(new Date('2018-12-04'), true, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY', 'TROLL'],
             );
           });
         });

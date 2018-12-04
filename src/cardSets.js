@@ -5,13 +5,13 @@ const cardSets: CardSet[] = [
   {
     name: 'CORE', // Basic
     isClassic: true,
-    releasedAt: null,
+    releasedAt: new Date('2014/03/11'),
     expiredAt: null,
   },
   {
     name: 'EXPERT1', // Expert cards
     isClassic: true,
-    releasedAt: null,
+    releasedAt: new Date('2014/03/11'),
     expiredAt: null,
   },
   {
@@ -90,6 +90,12 @@ const cardSets: CardSet[] = [
     name: 'BOOMSDAY', // The Boomsday Project
     isClassic: false,
     releasedAt: new Date('2018-08-07'),
+    expiredAt: null,
+  },
+  {
+    name: 'TROLL', // Rastakhan's Rumble
+    isClassic: false,
+    releasedAt: new Date('2018-12-04'),
     expiredAt: null,
   },
 ];
