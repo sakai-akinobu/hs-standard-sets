@@ -1,5 +1,4 @@
-// @flow
-import type {CardSet} from './types';
+import {CardSet} from './types';
 import cardSets from './cardSets';
 
 function isExpiredAt(cardSet: CardSet, date: Date) {

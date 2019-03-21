@@ -1,5 +1,4 @@
-// @flow
-import type {CardSet} from './types';
+import {CardSet} from './types';
 
 const cardSets: CardSet[] = [
   {

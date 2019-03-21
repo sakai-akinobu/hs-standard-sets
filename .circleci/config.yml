@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:8.11
+      - image: circleci/node:10.15
       
     working_directory: ~/repo
 
@@ -11,14 +11,13 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+            - npm-modules-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: npm-modules-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm run lint
-      - run: npm run flow
       - run: npm test
 
 
