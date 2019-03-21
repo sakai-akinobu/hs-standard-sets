@@ -8,7 +8,7 @@
     "prepublish": "$(npm bin)/rollup -c",
     "compile": "npx tsc --noEmit",
     "build": "$(npm bin)/rollup -c",
-    "test": "NODE_ENV=test $(npm bin)/mocha --require @babel/register --recursive test/*-test.js test/**/*-test.js",
+    "test": "NODE_ENV=test TS_NODE_PROJECT=test/tsconfig.json npx mocha --require ts-node/register --require espower-typescript/guess --recursive test/*-test.ts test/**/*-test.ts",
     "lint": "$(npm bin)/eslint src/*.js src/**/*.js",
     "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix",
     "flow": "$(npm bin)/flow"
