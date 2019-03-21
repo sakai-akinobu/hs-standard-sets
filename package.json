@@ -10,8 +10,7 @@
     "build": "$(npm bin)/rollup -c",
     "test": "NODE_ENV=test TS_NODE_PROJECT=test/tsconfig.json npx mocha --require ts-node/register --require espower-typescript/guess --recursive test/*-test.ts test/**/*-test.ts",
     "lint": "$(npm bin)/eslint src/*.js src/**/*.js",
-    "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix",
-    "flow": "$(npm bin)/flow"
+    "lint:fix": "$(npm bin)/eslint src/*.js src/**/*.js --fix"
   },
   "repository": {
     "type": "git",
