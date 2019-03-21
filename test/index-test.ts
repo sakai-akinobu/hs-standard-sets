@@ -1,4 +1,3 @@
-// @noflow
 /* eslint-disable max-nested-callbacks */
 import {describe, it} from 'mocha';
 import assert from 'power-assert';
@@ -13,7 +12,7 @@ describe('src/index.js', function() {
 
     it('An argument is null', function() {
       assert.throws(() => {
-        sets(null);
+        sets(null as any);
       }, TypeError);
     });
 
@@ -25,13 +24,13 @@ describe('src/index.js', function() {
       describe('An argument is not a Date object', function() {
         it('string', function() {
           assert.throws(() => {
-            sets({date: '2018-09-01'});
+            sets({date: '2018-09-01'} as any);
           }, TypeError);
         });
 
         it('number', function() {
           assert.throws(() => {
-            sets({date: 1});
+            sets({date: 1} as any);
           }, TypeError);
         });
       });
@@ -45,13 +44,13 @@ describe('src/index.js', function() {
       describe('An argument is not a boolean', function() {
         it('string', function() {
           assert.throws(() => {
-            sets({withoutClassic: 'true'});
+            sets({withoutClassic: 'true'} as any);
           }, TypeError);
         });
 
         it('number', function() {
           assert.throws(() => {
-            sets({withoutClassic: 1});
+            sets({withoutClassic: 1} as any);
           }, TypeError);
         });
       });
@@ -65,13 +64,13 @@ describe('src/index.js', function() {
       describe('An argument is not a boolean', function() {
         it('string', function() {
           assert.throws(() => {
-            sets({isExpired: 'true'});
+            sets({isExpired: 'true'} as any);
           }, TypeError);
         });
 
         it('number', function() {
           assert.throws(() => {
-            sets({isExpired: 1});
+            sets({isExpired: 1} as any);
           }, TypeError);
         });
       });

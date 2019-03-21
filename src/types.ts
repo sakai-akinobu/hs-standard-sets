@@ -1,4 +1,3 @@
-// @flow
 export type Options = {
   date?: Date,
   withoutClassic?: boolean,
@@ -24,9 +23,9 @@ export type CardSetName =
   | 'TROLL'
   ;
 
-export type CardSet = {|
+export type CardSet = {
   name: CardSetName,
   isClassic: boolean,
-  releasedAt: ?Date,
-  expiredAt: ?Date,
-|};
+  releasedAt: Date | null | void,
+  expiredAt: Date | null | void,
+};

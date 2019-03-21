@@ -1,9 +1,8 @@
-// @flow
 /* eslint-disable max-nested-callbacks */
 import {describe, it} from 'mocha';
 import assert from 'power-assert';
 
-import type {CardSetName} from '../src/types';
+import {CardSetName} from '../src/types';
 import {filter} from '../src/cardSetFilter';
 
 describe('src/cardSetFilter.js', function() {

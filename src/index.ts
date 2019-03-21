@@ -1,8 +1,7 @@
-// @flow
 import isDate from 'lodash/isDate';
 import isBoolean from 'lodash/isBoolean';
 
-import type {Options} from './types';
+import {Options} from './types';
 import {filter} from './cardSetFilter';
 
 export function sets({
