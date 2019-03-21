@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "$(npm bin)/rollup -c",
+    "compile": "npx tsc --noEmit",
     "build": "$(npm bin)/rollup -c",
     "test": "NODE_ENV=test $(npm bin)/mocha --require @babel/register --recursive test/*-test.js test/**/*-test.js",
     "lint": "$(npm bin)/eslint src/*.js src/**/*.js",
