@@ -11,12 +11,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+            - npm-modules-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: npm-modules-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm run lint
       - run: npm test
 
