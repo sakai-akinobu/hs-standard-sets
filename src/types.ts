@@ -1,8 +1,8 @@
-export type Options = {
-  date?: Date,
-  withoutClassic?: boolean,
-  isExpired?: boolean,
-};
+export interface Options {
+  date?: Date;
+  withoutClassic?: boolean;
+  isExpired?: boolean;
+}
 
 export type CardSetName =
   | 'CORE'
@@ -23,9 +23,9 @@ export type CardSetName =
   | 'TROLL'
   ;
 
-export type CardSet = {
-  name: CardSetName,
-  isClassic: boolean,
-  releasedAt: Date | null | void,
-  expiredAt: Date | null | void,
-};
+export interface CardSet {
+  name: CardSetName;
+  isClassic: boolean;
+  releasedAt: Date | null | void;
+  expiredAt: Date | null | void;
+}
