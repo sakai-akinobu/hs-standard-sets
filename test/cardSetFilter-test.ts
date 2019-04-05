@@ -274,6 +274,19 @@ describe('src/cardSetFilter.js', function() {
           );
         });
       });
+
+      describe('Rise of Shadows', function() {
+        it('before', function() {
+          assert.strictEqual(
+            filterCardSet('2019-04-08', 'DALARAN').length,
+            0
+          );
+          assert.strictEqual(
+            filterCardSet('2019-04-09', 'DALARAN').length,
+            1
+          );
+        });
+      });
     });
 
     describe('Standard rule', function() {
@@ -363,6 +376,16 @@ describe('src/cardSetFilter.js', function() {
             );
           });
         });
+
+        describe('Year of the Dragon', function() {
+          it('Release Rise of Shadows', function() {
+            const cardSetNames = filter(new Date('2019-04-09'), false, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN'],
+            );
+          });
+        });
       });
 
       describe('without classic', function() {
@@ -448,6 +471,16 @@ describe('src/cardSetFilter.js', function() {
             assert.deepStrictEqual(
               cardSetNames,
               ['UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY', 'TROLL'],
+            );
+          });
+        });
+
+        describe('Year of the Dragon', function() {
+          it('Release Rise of Shadows', function() {
+            const cardSetNames = filter(new Date('2019-04-09'), true, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN'],
             );
           });
         });

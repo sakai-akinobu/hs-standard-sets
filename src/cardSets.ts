@@ -65,19 +65,19 @@ const cardSets: CardSet[] = [
     name: 'UNGORO', // Journey to Un'Goro
     isClassic: false,
     releasedAt: new Date('2017-04-07'),
-    expiredAt: null,
+    expiredAt: new Date('2019-04-09'),
   },
   {
     name: 'ICECROWN', // Knights of the Frozen Throne
     isClassic: false,
     releasedAt: new Date('2017-08-11'),
-    expiredAt: null,
+    expiredAt: new Date('2019-04-09'),
   },
   {
     name: 'LOOTAPALOOZA', // Kobolds & Catacombs
     isClassic: false,
     releasedAt: new Date('2017-12-07'),
-    expiredAt: null,
+    expiredAt: new Date('2019-04-09'),
   },
   {
     name: 'GILNEAS', // Witchwood
@@ -95,6 +95,12 @@ const cardSets: CardSet[] = [
     name: 'TROLL', // Rastakhan's Rumble
     isClassic: false,
     releasedAt: new Date('2018-12-04'),
+    expiredAt: null,
+  },
+  {
+    name: 'DALARAN', // Rise of Shadows
+    isClassic: false,
+    releasedAt: new Date('2019-04-09'),
     expiredAt: null,
   },
 ];
