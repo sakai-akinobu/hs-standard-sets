@@ -11,9 +11,11 @@ Returns the standard card sets that matches the conditions given by the options.
 
 ### Options
 
-- date: Optional. Returns available card sets at the given date. If omitted, the current date will be used.
-- withoutClassic: Default `false`. If set to `true`, returns card sets excluding classic sets.
-- isExpired: Default `false`. If set to `true`, returns expired card sets.
+| Option             | Default      | |
+| -----------------  | ------------ | --- |
+| date               | `new Date()` | Returns available card sets at the given date. If omitted, the current date will be used. |
+| withoutClassic     | `false`      | If set to `true`, returns card sets excluding classic sets. |
+| isExpired          | `false`      | If set to `true`, returns expired card sets. |
 
 The name of each card set conforms to "set" property provided by [HearthstoneJSON](https://hearthstonejson.com/).
 
