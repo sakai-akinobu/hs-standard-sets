@@ -1,6 +1,6 @@
 {
   "name": "hs-standard-sets",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Utilities for the Hearthstone standard card set.",
   "main": "lib/index.js",
   "types": "lib/src/index.d.ts",
