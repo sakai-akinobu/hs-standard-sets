@@ -25,17 +25,17 @@ The name of each card set conforms to "set" property provided by [HearthstoneJSO
 import {sets} from 'hs-standard-sets';
 // const sets = require('hs-standard-sets').sets;
 
-sets(); // As of September 3, 2018
-// => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
-
-sets({date: new Date('2017-08-20')});
-// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+sets(); // As of May 2, 2019
+// => [ 'CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN' ]
 
 sets({withoutClassic: true});
-// => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
+// => [ 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN' ]
 
 sets({isExpired: true});
-// => [ 'NAXX', 'GVG', 'BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS' ]
+// => [ 'NAXX', 'GVG', 'BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA' ]
+
+sets({date: new Date('2019-04-08')}); // Last day of the year of the Raven
+// => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY', 'TROLL' ]
 ```
 
 ### in Browser
@@ -43,17 +43,17 @@ sets({isExpired: true});
 ```html
 <script src="https://unpkg.com/hs-standard-sets/lib/index.js"></script>
 <script>
-HsStandardSets.sets(); // As of September 3, 2018
-// => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
-
-HsStandardSets.sets({date: new Date('2017-08-20')});
-// => [ 'CORE', 'EXPERT1', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN' ]
+HsStandardSets.sets(); // As of May 2, 2019
+// => [ 'CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN' ]
 
 HsStandardSets.sets({withoutClassic: true});
-// => [ 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY' ]
+// => [ 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN' ]
 
 HsStandardSets.sets({isExpired: true});
-// => [ 'NAXX', 'GVG', 'BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS' ]
+// => [ 'NAXX', 'GVG', 'BRM', 'TGT', 'LOE', 'OG', 'KARA', 'GANGS', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA' ]
+
+HsStandardSets.sets({date: new Date('2019-04-08')}); // Last day of the year of the Raven
+// => [ 'CORE', 'EXPERT1', 'UNGORO', 'ICECROWN', 'LOOTAPALOOZA', 'GILNEAS', 'BOOMSDAY', 'TROLL' ]
 </script>
 ```
 
