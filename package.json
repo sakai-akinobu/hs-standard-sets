@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "types": "lib/src/index.d.ts",
   "scripts": {
-    "prepublish": "$(npm bin)/rollup -c",
+    "prepublish": "npx rollup -c",
     "compile": "npx tsc --noEmit",
-    "build": "$(npm bin)/rollup -c",
+    "build": "npx rollup -c",
     "test": "NODE_ENV=test TS_NODE_PROJECT=test/tsconfig.json npx mocha --require ts-node/register --require espower-typescript/guess --recursive test/*-test.ts test/**/*-test.ts",
     "lint": "npx eslint src/*.ts src/**/*.ts",
     "lint:fix": "npx eslint src/*.ts src/**/*.ts --fix"
