@@ -287,6 +287,19 @@ describe('src/cardSetFilter.js', function() {
           );
         });
       });
+
+      describe('Saviors of Uldum', function() {
+        it('before', function() {
+          assert.strictEqual(
+            filterCardSet('2019-08-05', 'ULDUM').length,
+            0
+          );
+          assert.strictEqual(
+            filterCardSet('2019-08-06', 'ULDUM').length,
+            1
+          );
+        });
+      });
     });
 
     describe('Standard rule', function() {
@@ -385,6 +398,14 @@ describe('src/cardSetFilter.js', function() {
               ['CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN'],
             );
           });
+
+          it('Release Saviors of Uldum', function() {
+            const cardSetNames = filter(new Date('2019-08-06'), false, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN', 'ULDUM'],
+            );
+          });
         });
       });
 
@@ -481,6 +502,14 @@ describe('src/cardSetFilter.js', function() {
             assert.deepStrictEqual(
               cardSetNames,
               ['GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN'],
+            );
+          });
+
+          it('Release Saviors of Uldum', function() {
+            const cardSetNames = filter(new Date('2019-08-06'), true, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN', 'ULDUM'],
             );
           });
         });
