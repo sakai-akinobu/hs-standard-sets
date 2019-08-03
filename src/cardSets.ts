@@ -103,6 +103,12 @@ const cardSets: CardSet[] = [
     releasedAt: new Date('2019-04-09'),
     expiredAt: null,
   },
+  {
+    name: 'ULDUM', // Saviors of Uldum
+    isClassic: false,
+    releasedAt: new Date('2019-08-06'),
+    expiredAt: null,
+  },
 ];
 
 export default cardSets;

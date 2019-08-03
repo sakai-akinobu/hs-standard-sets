@@ -22,6 +22,7 @@ export type CardSetName =
   | 'BOOMSDAY'
   | 'TROLL'
   | 'DALARAN'
+  | 'ULDUM'
   ;
 
 export interface CardSet {
