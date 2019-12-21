@@ -109,6 +109,12 @@ const cardSets: CardSet[] = [
     releasedAt: new Date('2019-08-06'),
     expiredAt: null,
   },
+  {
+    name: 'DRAGONS', // Descent of Dragons
+    isClassic: false,
+    releasedAt: new Date('2019-12-10'),
+    expiredAt: null,
+  },
 ];
 
 export default cardSets;

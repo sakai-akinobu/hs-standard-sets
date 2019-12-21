@@ -300,6 +300,19 @@ describe('src/cardSetFilter.js', function() {
           );
         });
       });
+
+      describe('Descent of Dragons', function() {
+        it('before', function() {
+          assert.strictEqual(
+            filterCardSet('2019-12-09', 'DRAGONS').length,
+            0
+          );
+          assert.strictEqual(
+            filterCardSet('2019-12-10', 'DRAGONS').length,
+            1
+          );
+        });
+      });
     });
 
     describe('Standard rule', function() {
@@ -406,6 +419,14 @@ describe('src/cardSetFilter.js', function() {
               ['CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN', 'ULDUM'],
             );
           });
+
+          it('Release Descent of Dragons', function() {
+            const cardSetNames = filter(new Date('2019-12-10'), false, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['CORE', 'EXPERT1', 'GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN', 'ULDUM', 'DRAGONS'],
+            );
+          });
         });
       });
 
@@ -510,6 +531,14 @@ describe('src/cardSetFilter.js', function() {
             assert.deepStrictEqual(
               cardSetNames,
               ['GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN', 'ULDUM'],
+            );
+          });
+
+          it('Release Descent of Dragons', function() {
+            const cardSetNames = filter(new Date('2019-12-10'), true, false).map(cardSet => cardSet.name);
+            assert.deepStrictEqual(
+              cardSetNames,
+              ['GILNEAS', 'BOOMSDAY', 'TROLL', 'DALARAN', 'ULDUM', 'DRAGONS'],
             );
           });
         });
