@@ -23,6 +23,7 @@ export type CardSetName =
   | 'TROLL'
   | 'DALARAN'
   | 'ULDUM'
+  | 'DRAGONS'
   ;
 
 export interface CardSet {
